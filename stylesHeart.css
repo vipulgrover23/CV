@@ -1,0 +1,48 @@
+div{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    margin: 100px;
+    transform: rotate(-45deg);
+    animation: beat 1s infinite alternate;
+}
+div::before,
+div:after{
+    content: '';
+    background-color: red;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+div:before{
+    left: 50px;
+    top:0;
+}
+div:after{
+    top: -50px;
+    left: 0;
+}
+@keyframes beat {
+    0% {
+        transform: scale(1) rotate(-45deg);
+    }
+    100% {
+        transform: scale(1.5) rotate(-45deg);
+    }
+    
+}
+@keyframes b {
+    0%{
+        transform: sclae(1);
+    }
+    100%{
+        transform: scale(1.5);
+    }
+    
+}
+p{
+    margin-left: 500px ;
+    color: red;
+    animation: b 1s infinite alternate;
+}
